@@ -18,13 +18,15 @@ window.fetch(`${baseURL}/api/avo`)
     dataJSON.data.forEach(e => {
       const h2 = document.createElement('h2');
       h2.textContent = e.name;
-      
-
+      // h2.style = "font-size: 2rem";
+      // h2.style.fontSize = '2rem';
+      // h2.className = 'my-title';
+      h2.className = 'text-xl text-green-500';
       const img = document.createElement('img');
       img.src = `${baseURL}${e.image}`;
-
+      
       const span = document.createElement('span');
-      span.textContent = e.price;
+      span.textContent = formatPrice(e.price);
 
       const div = document.createElement('div');
 
@@ -35,3 +37,11 @@ window.fetch(`${baseURL}/api/avo`)
     console.log(fetchItems);
     app.append(...fetchItems);
   })
+
+function formatPrice(price){
+  const formattedPrice = new Intl.NumberFormat('en-EN',{
+    style: 'currency',
+    currency: 'USD'
+  }).format(price);
+  return formattedPrice;
+}
