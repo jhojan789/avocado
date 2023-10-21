@@ -12,6 +12,7 @@ html {
   font-size: 30rem;
   font-family: cursive, sans-serif;
   font-weight: 800;
+  text-align: center;
 }
 
 .my-p-style {
@@ -37,14 +38,15 @@ html {
   border-radius: 20px;
   padding: 10px;
 }
-
-
-
+#app div:hover {
+  background-color: #d2d2eb;
+}
 
 #app div h2 {
   font-size: 20rem;
   font-family: cursive,sans-serif;
   font-weight: bold;
+  text-align: center;
 }
 
 
@@ -52,8 +54,13 @@ html {
   display: block;
   font-size: 20rem;
   font-family: monospace;
+  text-align: center;
 }
 
+#app img{
+  width: 100%;
+  border-radius: 100%;
+}
 
 
 
